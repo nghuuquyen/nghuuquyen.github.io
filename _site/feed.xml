@@ -4,7 +4,7 @@
   <id>http://0.0.0.0:4000/</id>
   <title>Chirpy</title>
   <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
-  <updated>2022-10-25T10:35:39-05:00</updated>
+  <updated>2022-10-25T10:48:45-05:00</updated>
   <author>
     <name>your_full_name</name>
     <uri>http://0.0.0.0:4000/</uri>
@@ -17,6 +17,46 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Writing a New Post</title>
+    <link href="http://0.0.0.0:4000/posts/write-a-new-post/" rel="alternate" type="text/html" title="Writing a New Post" />
+    <published>2019-08-08T01:10:00-05:00</published>
+  
+    <updated>2019-08-08T01:10:00-05:00</updated>
+  
+    <id>http://0.0.0.0:4000/posts/write-a-new-post/</id>
+    <content src="http://0.0.0.0:4000/posts/write-a-new-post/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Tutorial" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      This post will guide you how to write a post on Chirpy theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be set.
+
+Naming and Path
+
+Create a new file named YYYY-MM-DD-TITLE.EXTENSION and put it in the _posts of the root directory. Please note that the EXTENSION must be one of md and markdown. If you want to...
+    </summary>
+  
+
+  </entry>
 
 </feed>
 

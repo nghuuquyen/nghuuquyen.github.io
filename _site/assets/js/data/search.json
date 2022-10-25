@@ -1,4 +1,19 @@
 [
   
+  {
+    "title": "Writing a New Post",
+    "url": "/posts/write-a-new-post/",
+    "categories": "Blogging, Tutorial",
+    "tags": "writing",
+    "date": "2019-08-08 01:10:00 -0500",
+    
+
+
+
+
+
+    "snippet": "This post will guide you how to write a post on Chirpy theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be..."
+  }
+  
 ]
 
