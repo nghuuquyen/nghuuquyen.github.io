@@ -1,18 +1,98 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body class="bg-[url('https://images.unsplash.com/photo-1579338775661-7d0b8621ec83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')] bg-cover bg-center">
-    <div id="app" class="min-h-screen w-full flex flex-coljustify-center items-center">
-      <div class="bg-slate-900 opacity-60 w-full flex flex-col text-white justify-center items-center pt-8 pb-8">
-        <h1 class="text-5xl font-bold animate-bounce">Good Morning !!</h1>
-        <p class="text-xl font-extralight mt-5">This is an example website with Vite and Tailwind CSS</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quyen's Site</title>
+</head>
+
+<body>
+  <!-- banner -->
+  <section
+    class="min-h-screen w-full flex flex-col justify-center items-center bg-[url('/banner.avif')] bg-cover bg-center">
+    <div class="w-full lg:w-[80%] p-8 text-gray-800">
+      <h1 class="text-6xl font-bold mb-5">
+        Hi, my name is <span class="text-teal-400">Quyen Nguyen Huu</span> <br />
+        <span class="mt-6">I'm the Web Developer.</span>
+      </h1>
+
+      <a href="#about-me" class="border-2 border-teal-400 p-3 hover:bg-teal-400 hover:text-white transition-colors">
+        <span class="text-xl">Know more</span>
+      </a>
+    </div>
+  </section>
+  <!-- banner ./ -->
+
+  <!-- about me -->
+  <section id="about-me" class="bg-teal-400 min-h-screen w-full flex flex-col justify-center items-center p-12 text-white">
+    <div class="w-full lg:w-[60%]">
+      <h2 class="uppercase text-5xl text-center font-bold text-white mb-6">About Me</h2>
+      <div class="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-3">
+        <img class="object-cover col-span-1" src="https://nguyenhuuquyen.com/imgs/avatar.png" title="My avatar"
+          alt="My avatar" />
+        <div class="col-span-2 flex justify-center items-center">
+          <div class="p-8">
+            <p class="pb-3 text-2xl font-light mb-5">
+              I love programming, application development, and research software architecture. My career
+              objective is to become a Senior Software Engineer who masters software architecture, design
+              principles, and modern development technologies.
+            </p>
+            <a href="https://drive.google.com/file/d/1rrqhPdD-moRjUvEqm7f_e6NvI_2hLhV_"
+              target="_blank"
+              class="border-2 border-white p-3 text-white hover:bg-white hover:text-teal-400 transition-colors">
+              <span class="text-xl">View My CV</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <script type="module" src="/src/scripts/application.js"></script>
-  </body>
+  </section>
+  <!-- about me ./ -->
+
+  <!-- contact -->
+  <section id="contact" class="bg-white flex flex-col justify-center items-center p-6 lg:p-12 text-gray-800">
+    <div class="w-full lg:w-[60%] mb-5">
+      <h2 class="uppercase text-5xl text-center font-bold mb-6">Contact</h2>
+      <p class="flex flex-col justify-start items-start lg:justify-center lg:items-center pt-5 pb-5">
+        <span class="text-2xl text-teal-500">I LOOK FORWARD TO WORKING WITH YOU</span>
+        <span>I'm so happy that my skills might bring values to you. Let's connect for work</span>
+      </p>
+    </div>
+    <a href="mailto: nghuuquyen@gmail.com?subject=Hi, Quyen I want to connect with you for work !!!&body=Please describe your work or projects requirements"
+      class="border-2 border-teal-400 p-3 bg-teal-400 text-white hover:bg-white hover:text-teal-400 transition-colors">
+      <span class="text-xl uppercase">Send An Email Now</span>
+    </a>
+  </section>
+  <!-- contact ./ -->
+
+  <!-- footer -->
+  <footer class="bg-neutral-900 min-h-[300px] pt-12 pb-12 flex flex-row justify-center items-center">
+    <div class="w-[60%] flex flex-col justify-center items-center">
+      <ul class="flex flex-row">
+        <li class="pl-6 pr-6">
+          <a href="https://twitter.com/nghuuquyen" target="_blank">
+            <img class="w-10 grayscale" src="/imgs/twitter.svg" />
+          </a>
+        </li>
+        <li class="pl-6 pr-6">
+          <a href="https://www.linkedin.com/in/nghuuquyen" target="_blank">
+            <img class="w-10 grayscale" src="/imgs/linkedin.svg" />
+          </a>
+        </li>
+        <li class="pl-6 pr-6">
+          <a href="https://github.com/nghuuquyen" target="_blank">
+            <img class="w-10 grayscale" src="/imgs/github.svg" />
+          </a>
+        </li>
+      </ul>
+
+      <hr class="w-1/2 border-gray-500 mt-10"/>
+      <p class="text-lg text-gray-500 mt-5">©2023 - Quyen Nguyen Huu</p>
+    </div>
+  </footer>
+  <!-- footer ./ -->
+  <script type="module" src="/src/scripts/application.js"></script>
+</body>
 </html>
