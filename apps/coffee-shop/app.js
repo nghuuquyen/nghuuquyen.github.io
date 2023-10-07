@@ -1,5 +1,4 @@
 import './style.css'
-const serviceWorkerUrl = new URL('./serviceWorker.js', import.meta.url).href
 
 const container = document.querySelector(".container")
 
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", showCoffees)
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
         navigator.serviceWorker
-            .register(serviceWorkerUrl)
+            .register('./serviceWorker.js')
             .then(() => console.log("service worker registered"))
             .catch(err => console.log("service worker not registered", err))
     })
