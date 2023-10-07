@@ -15,26 +15,26 @@
 </head>
 
 <body>
-    <main class="bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 min-h-screen w-full flex items-center justify-center">
-        <div x-data="toDoList()" class="max-w-2xl w-full mx-auto px-12 py-8 rounded-lg shadow-lg bg-gray-100">
-            <div class="flex flex-col items-center justify-center mb-8">
-                <h1 class="text-3xl font-bold mb-8">
+    <main class="min-h-screen w-full flex items-center justify-center bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 px-2">
+        <div x-data="toDoList()" class="max-w-2xl w-full mx-auto px-4 py-12 md:px-12 md:py-8 rounded-lg shadow-xl bg-white">
+            <div class="flex flex-col items-center justify-center mb-4">
+                <h1 class="text-3xl font-bold mb-8 text-sky-700">
                     To Do List
                 </h1>
                 <input type="text" x-model="newTodo" placeholder="I need to..."
-                    class="mx-auto px-4 py-2 rounded shadow text-lg min-w-full" @keydown.enter="addToDo">
+                    class="mx-auto px-4 py-2 h-16 rounded shadow text-lg min-w-full border-b-4 border-sky-400 focus:outline-none" @keydown.enter="addToDo">
             </div>
-            <div class="bg-white w-full rounded shadow mb-8">
+            <div class="bg-white w-full rounded mb-8">
                 <template x-for="(todo, index) in todos" :key="index">
-                    <div class="flex items-center py-4" :class="{ 'border-b border-gray-400': ! isLastToDo(index) }">
-                        <div class="w-1/12 text-center">
-                            <input type="checkbox" @change="toggleToDoCompleted(index)" :checked="todo.completed">
+                    <div class="flex items-center py-4 mb-2 shadow-sm">
+                        <div class="w-1/12 text-center flex flex-row justify-start">
+                            <input class="ml-2" type="checkbox" @change="toggleToDoCompleted(index)" :checked="todo.completed">
                         </div>
                         <div class="w-10/12">
-                            <p x-text="todo.todo" :class="{ 'line-through': todo.completed }"></p>
+                            <p x-text="todo.todo" :class="{ 'line-through text-gray-400': todo.completed }"></p>
                         </div>
-                        <div class="w-1/12 text-center">
-                            <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700"
+                        <div class="w-1/12 text-center flex flex-row justify-end">
+                            <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700 mr-2"
                                 @click="deleteToDo(index)">
                                 &cross;
                             </button>
@@ -43,7 +43,7 @@
                 </template>
             </div>
             <div>
-                <span x-text="numberOfToDosCompleted()"></span> / <span x-text="toDoCount()"></span> to dos completed
+                <span x-text="numberOfToDosCompleted()"></span> / <span x-text="toDoCount()"></span> todos completed
             </div>
         </div>
     </main>
