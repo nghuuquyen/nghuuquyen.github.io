@@ -6,7 +6,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 'main': resolve(__dirname, 'index.html'),
-                'coffee-shop': resolve(__dirname, 'apps/coffee-shop/index.html')
+                'coffee-shop': resolve(__dirname, 'apps/coffee-shop/index.html'),
+                'todo-list': resolve(__dirname, 'apps/todo-list/index.html'),
             },
         },
     },

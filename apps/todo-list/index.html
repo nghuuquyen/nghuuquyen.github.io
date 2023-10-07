@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json" />
+  
+    <title>Todo List</title>
+</head>
+
+<body>
+    <main class="bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500 min-h-screen w-full flex items-center justify-center">
+        <div x-data="toDoList()" class="max-w-2xl w-full mx-auto px-12 py-8 rounded-lg shadow-lg bg-gray-100">
+            <div class="flex flex-col items-center justify-center mb-8">
+                <h1 class="text-3xl font-bold mb-8">
+                    To Do List
+                </h1>
+                <input type="text" x-model="newTodo" placeholder="I need to..."
+                    class="mx-auto px-4 py-2 rounded shadow text-lg min-w-full" @keydown.enter="addToDo">
+            </div>
+            <div class="bg-white w-full rounded shadow mb-8">
+                <template x-for="(todo, index) in todos" :key="index">
+                    <div class="flex items-center py-4" :class="{ 'border-b border-gray-400': ! isLastToDo(index) }">
+                        <div class="w-1/12 text-center">
+                            <input type="checkbox" @change="toggleToDoCompleted(index)" :checked="todo.completed">
+                        </div>
+                        <div class="w-10/12">
+                            <p x-text="todo.todo" :class="{ 'line-through': todo.completed }"></p>
+                        </div>
+                        <div class="w-1/12 text-center">
+                            <button class="bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700"
+                                @click="deleteToDo(index)">
+                                &cross;
+                            </button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div>
+                <span x-text="numberOfToDosCompleted()"></span> / <span x-text="toDoCount()"></span> to dos completed
+            </div>
+        </div>
+    </main>
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>
