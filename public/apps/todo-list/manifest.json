@@ -1,10 +1,10 @@
 {
   "name": "Todo List",
-  "short_name": "TodoList",
+  "short_name": "Todo List",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#fdfdfd",
-  "theme_color": "#62dfcc",
+  "theme_color": "#488cf7",
   "orientation": "portrait-primary",
   "icons": [
     {
